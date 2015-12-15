@@ -1,0 +1,3 @@
+Este es un <b>e-mail</b> enviando desde <b>Python</b>
+Contine un fichero adjunto con los resultados
+deberia de salir quien lo ha ejecutado

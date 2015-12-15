@@ -1,0 +1,16 @@
+#pip3 install -r requirements.txt
+# required
+#requests>=2.0
+
+#fichero speed test
+speedtest-cli
+
+#fichero smtp
+mailer
+email
+uuid
+
+
+
+
+

@@ -1,0 +1,16 @@
+test de velocidad
+enviar correo con los datos
+test basico
+
+cuando mande un correo que se aespecifico, ahora se mandan todos los *.github
+
+CIFRAR LA CONTRASEÑA DE CORREO
+
+ip dinamica
+dns dinamico
+PyInstaller  un unico ejecutable
+os.environ['LOCALAPPDATA']
+Hacer que el cliente tenga que introducir su si 
+Para enviarlo en el email
+
+Integrar todas las librerias de speedtest.cli
