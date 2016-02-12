@@ -1,8 +1,13 @@
-import zipfile
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import glob
-import funciones
 import sys
+
 import tarfile
+import zipfile
+
+import funciones
 
 ruta = funciones.CreaDirectorioTrabajo()
 

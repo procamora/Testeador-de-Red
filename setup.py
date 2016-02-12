@@ -1,26 +1,29 @@
 #!/bin/env python
 # -*- coding: utf-8 -*-
-from cx_Freeze import setup, Executable
+
 import sys
+
+from cx_Freeze import setup, Executable
+
 
 # GUI applications require a different base on Windows (the default is for a
 # console application).
 base = None
 if sys.platform == 'win32':
-	base = 'Win32GUI'
+    base = 'Win32GUI'
 '''
 exe=Executable(
-	script='index.py',
-	base='Win32Gui',
-	icon='Principal.ico'
-	)
+    script='index.py',
+    base='Win32Gui',
+    icon='Principal.ico'
+    )
 '''
 exe=Executable(
-	script='main.py',
-	base=base,
-	icon='images/Principal.ico',
-	copyDependentFiles = True
-	)
+    script='main.py',
+    base=base,
+    icon='images/Principal.ico',
+    copyDependentFiles = True
+    )
 
 include_files=['admin.pyc', 'changeip.pyc', 'Compresion.pyc', 'funciones.pyc', 'gui.pyc', 'letter.txt', 'smtp.pyc', 'utils.pyc', './images/', './speedtest/']
 includes = []
@@ -30,13 +33,13 @@ packages=['re', 'time', 'sys', 'os', 'platform', 'Tkinter', 'tkFileDialog', 'mai
 
 
 setup(
-	version = '1.0',
-	description = 'Configurador Ubiquiti',
-	author = 'Pablo Rocamora',
-	name = 'Ubiquiti Configurator',
-	author_email='pablojoserocamora@gmail.com',
-	options = {'build_exe': {'includes':includes, 'excludes':excludes, 'packages':packages, 'include_files':include_files}},
-	executables = [exe]
-	)
+    version = '1.0',
+    description = 'Configurador Ubiquiti',
+    author = 'Pablo Rocamora',
+    name = 'Ubiquiti Configurator',
+    author_email='pablojoserocamora@gmail.com',
+    options = {'build_exe': {'includes':includes, 'excludes':excludes, 'packages':packages, 'include_files':include_files}},
+    executables = [exe]
+    )
 
 # python.exe .\setup.py build
