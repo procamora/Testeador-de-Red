@@ -13,7 +13,7 @@ def CreaDirectorioTrabajo(directorio = 'github'):
 
 def BoraFichero(rutaCompleta):
 	if os.path.exists(rutaCompleta):
-		print 'borrado: '+rutaCompleta
+		print('borrado: '+rutaCompleta)
 		os.remove(rutaCompleta)
 		
 	def EstableceCliente():
@@ -51,7 +51,7 @@ def ipWMI():
 	colNicConfigs = wmiService.Win32_NetworkAdapterConfiguration(IPEnabled = True)
 
 	if len(colNicConfigs) < 1:
-		print "Can not get network configuration"
+		print("Can not get network configuration")
 		exit()
 
 	objNicConfig = colNicConfigs[0]

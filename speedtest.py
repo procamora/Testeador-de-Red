@@ -12,7 +12,7 @@ def main(server='1652'):
 	comando = 'speedtest_cli.exe --server %s > %s'%(server,fichero)
 	#comando = 'help'
 	res = os.system(comando)
-	print res
+	print(res)
 	if res == 1:
 		f = open(fichero, 'a')
 		f.write('Fallo al hacer el test de velocidad')

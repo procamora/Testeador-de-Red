@@ -78,13 +78,13 @@ def ProcesosComunes():
 				gui.msgbox('Hubo un problema al enviar el correo')
 				main()
 		elif opciones == choices[1]:
-			print 'no enviar'					#
+			print('no enviar')					#
 			sys.exit(0)
 		elif opciones == choices[2]:
-			print 'menu'
+			print('menu')
 			main()
 	else:
-		print 'no'
+		print('no')
 		sys.exit(0)
 
 
@@ -101,7 +101,7 @@ def Adaptadores():
 		sys.exit(0)
 
 	if reply == choices[1]:
-		print 'static'
+		print('static')
 		dat = funciones.ipWMI()
 
 		msg ="Introduce la nueva ip"
@@ -114,7 +114,7 @@ def Adaptadores():
 		batSTATIC(adaptador, choice)
 		
 	elif reply == choices[0]:
-		print 'dhcp'
+		print('dhcp')
 		batDHCP(adaptador)
 	
 	
@@ -123,7 +123,7 @@ def EnProceso():
 	main()
 
 def nada():
-	print 'nada'
+	print('nada')
 
 def main():
 	msg ='Que prueba quieres realizar'

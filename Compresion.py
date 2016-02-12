@@ -17,7 +17,7 @@ def main():
 			#zf.write(i) # ruta ichero y nombre con el que se guarda, este ultimo solo cojo el nombre, no los directorios
 			zf.write(i,i.split('\\')[-1], compress_type=zipfile.ZIP_DEFLATED) # ruta ichero y nombre con el que se guarda, este ultimo solo cojo el nombre, no los directorios
 	finally:
-		print 'finalmente'
+		print('finalmente')
 		zf.close()
 	return FicheroZip
 

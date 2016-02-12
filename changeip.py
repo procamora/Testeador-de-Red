@@ -48,7 +48,7 @@ def listaAdaptadores():
 def batSTATIC(adaptadores, datos):
 	#adaptadores = listaAdaptadores()		# coger esta funcion en main y ponerla con interfaz grafica y mandar la interfaz como parametro a la funcion
 	
-	print datos
+	print(datos)
 	#netsh interface ipv4 set address name = "Conexión de área local 2" source=static address=172.0.0.181 mask=255.255.255.0 gateway=172.0.0.121
 	comando = '''netsh interface ipv4 set address name="%s" source=static %s %s %s 1
 netsh interface ipv4 set dns name="%s" static %s
@@ -58,9 +58,9 @@ netsh interface ipv4 add dns name="%s" %s index=2'''%(adaptadores, datos[0], dat
 	netshcmd=subprocess.Popen('ip.bat', shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE )
 	output, errors =  netshcmd.communicate()
 	if errors: 
-		print "WARNING: ", errors
+		print("WARNING: ", errors)
 	else:
-		print "SUCCESS ", output	
+		print("SUCCESS ", output)	
 
 def batDHCP(adaptadores):
 	#adaptadores = listaAdaptadores()		# coger esta funcion en main y ponerla con interfaz grafica y mandar la interfaz como parametro a la funcion
@@ -72,9 +72,9 @@ netsh interface ipv4 set dnsservers name="%s" source=dhcp'''%(adaptadores,adapta
 	netshcmd=subprocess.Popen('ip.bat', shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE )
 	output, errors =  netshcmd.communicate()
 	if errors: 
-		print "WARNING: ", errors
+		print("WARNING: ", errors)
 	else:
-		print "SUCCESS ", output	
+		print("SUCCESS ", output)	
 
 
 #batDHCP()
